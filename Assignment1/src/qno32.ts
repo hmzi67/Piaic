@@ -1,11 +1,19 @@
-let current_user = ['hmzi67','awais12','jamal12','saif12','Anas']
-let new_user = ['hmzi67','awais12','mahaz12','amir12','shazil12']
+function checkUserNames(current_user: string[], new_user: string[]): void {
+    
+    const currentUsersLower = current_user.map(user => user.toLowerCase());
 
-for (let newUser in new_user){
-    if(newUser in current_user){
-        console.log(`sorry ${new_user[newUser]} is already taken`)
-    }
-    else{
-        console.log(`USER NAME  IS available`)
+    for (let newUser of new_user){
+        const newUserLower = newUser.toLowerCase();
+
+        if(currentUsersLower.includes(newUserLower)){
+            console.log(`Sorry ${newUser} is already taken. Please try another one`)
+        }
+        else{
+            console.log(`The username ${newUser} is available`)
+        }
     }
 }
+let current_user = ['hmzi67','awais12','jamal12','saif12','Anas']
+let new_user = ['hMzi67','awais12','mahaz12','amir12','shazil12']
+
+checkUserNames(current_user, new_user)
