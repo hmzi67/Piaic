@@ -1,7 +1,9 @@
+#!/usr/bin/env node
+
 import { calculateScore } from "./modules/calculateScore.js";
 import { mcqs } from "./modules/mcqs.js";
 import chalk from 'chalk';
-
+             
 
 
 console.log(chalk.bold.yellow(`*********************************************************************`))

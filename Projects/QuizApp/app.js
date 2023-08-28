@@ -8,7 +8,7 @@ console.log('');
 console.log(chalk.bgYellowBright.bold.black(` Your can check your inputs... `));
 console.log('');
 for (let x in mcqs) {
-    console.log(chalk.bgGray.bold.black(" \t", x + ": ", mcqs[x], " "));
+    console.log(chalk.bgGray.bold.black("\t ", x + ": ", mcqs[x]));
 }
 console.log('');
 console.log(chalk.bgYellowBright.bold.black(` ******************* Result ******************* `));

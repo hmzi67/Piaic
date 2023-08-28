@@ -1,16 +1,16 @@
 import { mcqs } from "./mcqs.js"
 
-let userInput:string[] = []
-    userInput.push(mcqs['Qno1'])
-    userInput.push(mcqs['Qno2'])
-    userInput.push(mcqs['Qno3'])
-    userInput.push(mcqs['Qno4'])
-    userInput.push(mcqs['Qno5'])
-    userInput.push(mcqs['Qno6'])
-    userInput.push(mcqs['Qno7'])
-    userInput.push(mcqs['Qno8'])
-    userInput.push(mcqs['Qno9'])
-    userInput.push(mcqs['Qno10'])
+let userInput:string[] = [];
+    userInput.push(mcqs['Qno1']);
+    userInput.push(mcqs['Qno2']);
+    userInput.push(mcqs['Qno3']);
+    userInput.push(mcqs['Qno4']);
+    userInput.push(mcqs['Qno5']);
+    userInput.push(mcqs['Qno6']);
+    userInput.push(mcqs['Qno7']);
+    userInput.push(mcqs['Qno8']);
+    userInput.push(mcqs['Qno9']);
+    userInput.push(mcqs['Qno10']);
     
 console.log(userInput)
 
