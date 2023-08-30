@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 import showBanner from 'node-banner';
 import chalk from 'chalk';
