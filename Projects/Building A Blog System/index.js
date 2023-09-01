@@ -1,42 +1,105 @@
-"use strict";
-// Task 2: Building a Blog System
-// Imagine you're developing a TypeScript application for a blogging platform. Create the following types and interfaces:
-// Define an interface Author with properties like id, name, and bio.
-// Create a type Comment that represents an object with author (of type Author), content, and timestamp.
-// Define an interface Post with properties like id, title, content, author (of type Author), and an array of Comments.
-// Implement a function that sorts posts based on their number of comments.
-let author = {
-    id: 1,
-    name: 'Hamza Waheed Abbasi',
-    bio: 'Software Engineer'
-};
-let comments = [
-    {
-        author: 'Saif',
-        content: 'photo',
-        timestamp: new Date(),
-    },
-    {
-        author: 'Jamal',
-        content: 'photo',
-        timestamp: new Date(),
-    },
-    {
-        author: 'Anas',
-        content: 'photo',
-        timestamp: new Date(),
-    },
-];
+import chalk from "chalk";
+import showBanner from "node-banner";
+(async () => {
+    await showBanner('Blog System', 'by Hamza Waheed Abbasi');
+})();
 ;
-let post = {
-    id: 1,
-    title: 'I love Typescript',
-    author: author,
-    comment: comments,
-};
-function sortPost(post) {
-    for (let x in post) {
-        console.log(post);
+let posts = [
+    {
+        id: 1,
+        title: 'Natural Beauty',
+        author: {
+            id: 1,
+            name: 'Hamza Waheed Abbasi',
+            bio: 'Software Developer'
+        },
+        comments: [
+            {
+                author: {
+                    id: 1,
+                    name: 'Awais Yameen',
+                    bio: 'Teacher'
+                },
+                content: 'Wow! ',
+                timestamp: new Date(),
+            },
+            {
+                author: {
+                    id: 2,
+                    name: 'Saif Mughal',
+                    bio: 'Web Developer'
+                },
+                content: 'Niceee!',
+                timestamp: new Date(),
+            },
+        ]
+    },
+    {
+        id: 2,
+        title: 'By the Seaside',
+        author: {
+            id: 2,
+            name: 'Jamal Wajid',
+            bio: 'Businessman'
+        },
+        comments: [
+            {
+                author: {
+                    id: 3,
+                    name: 'Anas Tufail',
+                    bio: 'Businessman'
+                },
+                content: 'Really cool..!',
+                timestamp: new Date(),
+            },
+        ]
+    },
+    {
+        id: 3,
+        title: 'The Wild Places',
+        author: {
+            id: 3,
+            name: 'Mahaz Abbasi',
+            bio: 'Web Developer'
+        },
+        comments: [
+            {
+                author: {
+                    id: 4,
+                    name: 'Amir',
+                    bio: 'Developer'
+                },
+                content: 'It is Great..!',
+                timestamp: new Date(),
+            },
+            {
+                author: {
+                    id: 5,
+                    name: 'Shazil',
+                    bio: 'Web Developer'
+                },
+                content: 'Amazing..!',
+                timestamp: new Date(),
+            },
+            {
+                author: {
+                    id: 6,
+                    name: 'Naveed',
+                    bio: 'Full Stack Developer'
+                },
+                content: 'Stunning..!',
+                timestamp: new Date(),
+            },
+        ]
+    }
+];
+posts.sort((a, b) => b.comments.length - a.comments.length);
+function sortPost() {
+    for (let post of posts) {
+        console.log(chalk.yellowBright(post.title));
     }
 }
-sortPost(post);
+console.log(chalk.bold.blueBright('****************************************'));
+console.log(chalk.bold.blueBright('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$'));
+console.log(chalk.bold.blueBright('****************************************'));
+sortPost();
