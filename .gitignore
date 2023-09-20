@@ -1,4 +1,5 @@
-/node_modules
-/class1
-/class2
-/.js
+# Ignores compiled TypeScript files
+**/*.js
+**/*node_modules
+**/*class1
+**/*class2
